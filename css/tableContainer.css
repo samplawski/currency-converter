@@ -1,0 +1,8 @@
+.tableContainer {
+    max-width: 90%;
+    overflow-x: auto;
+    background-color: #f8fdff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}

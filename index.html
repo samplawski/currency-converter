@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="js/script.js"></script>
+
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/tableContainer.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+    <link href="css/converter.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+
+    <title>Prosty kalkulator walut</title>
+  </head>
+
+  <body class="body">
+    <div class="tableContainer">
+      <table class="table">
+        <caption class="table__caption">
+          Waluty w kalkulatorze.
+        </caption>
+        <tr class="table__row">
+          <th class="table__header" scope="col">Nazwa waluty (angielska)</th>
+          <th class="table__header" scope="col">Nazwa waluty (polska)</th>
+          <th class="table__header" scope="col">Oznaczenie międzynarodowe</th>
+          <th class="table__header" scope="col">Symbol</th>
+          <th class="table__header" scope="col">
+            Aktualny kurs<!--aktualny kurs walut wpisywać w script.js:12:14, 13:14, 14:15)-->
+          </th>
+        </tr>
+        <tr class="table__row">
+          <th class="table__header" scope="row">United States dollar</th>
+          <td class="table__cell">Dolar amerykański</td>
+          <td class="table__cell">USD</td>
+          <td class="table__cell">&#x24;</td>
+          <td class="table__cell js-USD"></td>
+        </tr>
+
+        <tr class="table__row">
+          <th class="table__header" scope="row">Euro</th>
+          <td class="table__cell">Euro</td>
+          <td class="table__cell">EUR</td>
+          <td class="table__cell">&#8364;</td>
+          <td class="table__cell js-EUR"></td>
+        </tr>
+
+        <tr class="table__row">
+          <th class="table__header" scope="row">Pound sterling</th>
+          <td class="table__cell">Brytyjski funt szterling</td>
+          <td class="table__cell">GBP</td>
+          <td class="table__cell">&#163;</td>
+          <td class="table__cell js-GBP"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="converter">
+      <form class="form js-form">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Kalkulator walut</legend>
+
+          <p>
+            <label>
+              <span class="form__labelText">Wybierz walutę:</span>
+              <select name="currency" class="form__currencyField js-currency">
+                <option value="USD">&#x24; USD</option>
+                <option value="EUR">&#8364; EUR</option>
+                <option value="GBP">&#163; GBP</option>
+              </select>
+            </label>
+          </p>
+
+          <p>
+            <label>
+              <span class="form__labelText">Ile PLN chcesz wymienić:</span>
+              <input
+                name="PLN"
+                class="form__currencyField js-exchangedPLN"
+                type="number"
+                required
+                min="0"
+                step="0.01"
+                placeholder="Ile złotych wymieniasz?"
+              />
+            </label>
+          </p>
+        </fieldset>
+        <p>
+          <button
+            class="form__button"
+            type="submit"
+            value="Przelicz"
+            title="Przelicz"
+          >
+            Przelicz
+          </button>
+        </p>
+        <p>
+          <button
+            class="form__button"
+            type="reset"
+            value="Wyczyść"
+            title="Wyczyść"
+          >
+            Wyczyść
+          </button>
+        </p>
+        <p>
+          <label>
+            Po przewalutowaniu dostaniesz:
+            <strong class="js-output"
+              >Wybierz walutę i wpisz kwotę do wymiany.</strong
+            >
+          </label>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
