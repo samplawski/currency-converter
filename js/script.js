@@ -1,13 +1,20 @@
 {
-    const formElement = document.querySelector(".js-form");
-    const calculatedOutput = document.querySelector(".js-output");
-
-
     const welcome = () => {
         console.log("Serwus!")
+        console.log("In the commented lines there are things I am still working on.")
     }
     welcome();
 
+
+    const formElement = document.querySelector(".js-form");
+    const calculatedOutput = document.querySelector(".js-output");
+
+    /*const init = (formElement, calculatedOutput) => {
+        const formElement = document.querySelector(".js-form");
+        const calculatedOutput = document.querySelector(".js-output");
+        return { formElement, calculatedOutput }
+    };
+    init(formElement, calculatedOutput);*/
 
     const USDrate = 4.4126;
     const EURrate = 4.6836;
