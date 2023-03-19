@@ -22,16 +22,6 @@
     }
     currencyValue();
 
-    /* const currencyValue = () => {
-         USD.innerText = USDrate.toFixed(2) + ` zł`;
-         EUR.innerText = EURrate.toFixed(2) + ` zł`;
-         GBP.innerText = GBPrate.toFixed(2) + ` zł`;
-     }
-     const USD = document.querySelector(".js-USD");
-     const EUR = document.querySelector(".js-EUR");
-     const GBP = document.querySelector(".js-GBP");
-     currencyValue();*/
-
 
     const countOutput = () => {
         formElement.addEventListener("submit", (event) => {
@@ -59,40 +49,7 @@
             calculatedOutput.innerText = output.toFixed(2) + " " + currency;
         });
     }
-
     countOutput();
-
-    /*
-    const countOutput = () => {
-        const foreignMoney = document.querySelector(".js-currency");
-        const polishMoney = document.querySelector(".js-exchangedPLN");
-
-        formElement.addEventListener("submit", (event) => {
-            event.preventDefault();
-
-            const currency = foreignMoney.value;
-            const PLN = polishMoney.value;
-
-            let rate;
-            switch (currency) {
-                case "USD":
-                    rate = USDrate;
-                    break;
-
-                case "EUR":
-                    rate = EURrate;
-                    break;
-
-                case "GBP":
-                    rate = GBPrate;
-            }
-
-            const output = PLN / rate;
-
-            calculatedOutput.innerText = output.toFixed(2) + " " + currency;
-        });
-    }
-    countOutput(); */
 
 
     const resetForm = () => {
