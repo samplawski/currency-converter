@@ -9,12 +9,6 @@
     const formElement = document.querySelector(".js-form");
     const calculatedOutput = document.querySelector(".js-output");
 
-    /*const init = (formElement, calculatedOutput) => {
-        const formElement = document.querySelector(".js-form");
-        const calculatedOutput = document.querySelector(".js-output");
-        return { formElement, calculatedOutput }
-    };
-    init(formElement, calculatedOutput);*/
 
     const USDrate = 4.4126;
     const EURrate = 4.6836;
