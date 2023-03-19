@@ -1,7 +1,6 @@
 {
     const welcome = () => {
         console.log("Serwus!")
-        console.log("In the commented lines there are things I am still working on.")
     }
     welcome();
 
