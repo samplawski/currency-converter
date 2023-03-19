@@ -45,8 +45,12 @@
 
             const output = PLN / rate;
 
-            calculatedOutput.innerText = output.toFixed(2) + " " + currency;
+            displayResult(output, currency);
         });
+    }
+
+    const displayResult = (output, currency) => {
+        calculatedOutput.innerText = output.toFixed(2) + " " + currency;
     }
     countOutput();
 
