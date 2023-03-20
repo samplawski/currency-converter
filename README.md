@@ -1,5 +1,3 @@
-<base target="_blank">
-
 # Currency converter
 ## Demo
 You can try it under this link: https://samplawski.github.io/currency-converter/.
