@@ -4,7 +4,7 @@
 
 .form__legend {
     border-radius: 3px;
-    background-color: #d7ba83;
+    background-color: hsl(39, 51%, 68%);
     padding: 4px 8px;
 }
 
@@ -23,8 +23,6 @@
     border-radius: 3px;
 }
 
-
-
 .form__button {
     width: 50%;
     display: block;
@@ -32,14 +30,14 @@
     margin-right: auto;
     border: none;
     border-radius: 3px;
-    background-color: #d7ba83;
+    background-color: hsl(39, 51%, 68%);
     padding: 4px;
 }
 
 .form__button:hover {
-    background-color: #b98d3c;
+    background-color: hsl(39, 51%, 48%);
 }
 
 .form__button:active {
-    background-color: #92702f;
+    background-color: hsl(39, 51%, 38%);
 }
