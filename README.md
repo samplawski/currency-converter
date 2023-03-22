@@ -24,9 +24,9 @@ This is a simple Currency converter built as an exercise with the use of HTML an
 - Convert PLN to USD, EUR, and GBP
 - Simple and intuitive user interface
 - Responsive design that works on desktop and mobile devices
-- links in the footer to: 
-    - the project's GitHub repository
-    - contact the creator via email
+- links in the footer: 
+    - to the project's GitHub repository
+    - to contact the creator via email
 
 ## 3. Technologies Used
 
