@@ -2,8 +2,9 @@
 a simple currency converter
 
 You can try it under this [link](https://samplawski.github.io/currency-converter/).
-## Screenshot of the converter
 
+
+<img src="./images/screenshot.jpg" width="45%" alt="currency converter screenshot">
 
 ## Table of Contents
 
@@ -12,7 +13,8 @@ You can try it under this [link](https://samplawski.github.io/currency-converter
 3. Technologies Used
 4. Setup
 5. How to use
-6. Contributing
+6. Status and Contributing
+7. Contact
 
 ## 1. Short Description
 This is a simple Currency converter built as an exercise with the use of HTML and JavaScript. The styling was done with CSS accordingly to the BEM convention. It  allows you to quickly convert PLN (Polish złoty) to the three major currencies - USD (United States dollar), EUR (Euro), and GBP (British pound sterling).
@@ -22,10 +24,19 @@ This is a simple Currency converter built as an exercise with the use of HTML an
 - Convert PLN to USD, EUR, and GBP
 - Simple and intuitive user interface
 - Responsive design that works on desktop and mobile devices
+- links in the footer to: 
+    - the project's GitHub repository
+    - contact the creator via email
 
 ## 3. Technologies Used
 
-The converter is built with HTML, CSS, and JavaScript. The following external libraries are used in this project:
+The converter is built with the use of: 
+- HTML
+- CSS
+- JavaScript
+- BEM convention. 
+
+The following external libraries are used in this project:
 
 - normalize.css - for consistent styling across browsers
 - Google Fonts - for the "Roboto" font used throughout the page
@@ -46,9 +57,11 @@ To run this application locally, follow these steps:
 4. Click the "Przelicz" button to see the converted amount.
 5. The "Wyczyść" button resets the form
 
+## 6. Status and Contributing
 
-## 6. Contributing
+The project was created by Tomasz Sampławski. It is currently completed but may be updated in the future. Contributions are welcome and appreciated! 
 
-Contributions are welcome and appreciated!
+Feel free to use it for your own projects or modify it to suit your needs.
+## 7. Contact
 
-This project was created by Tomasz Sampławski. Feel free to use it for your own projects or modify it to suit your needs.
+If you want to contact me you can reach me at tsamplawski@gmail.com.
