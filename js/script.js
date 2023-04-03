@@ -2,63 +2,77 @@
     const welcome = () => {
         console.log("Serwus!")
     }
-    welcome();
 
 
     const formElement = document.querySelector(".js-form");
-    const calculatedOutput = document.querySelector(".js-output");
-
+    const calculatedOutputElement = document.querySelector(".js-output");
 
     const USDrate = 4.4126;
     const EURrate = 4.6836;
     const GBPrate = 5.3239;
 
 
-    const currencyValue = () => {
+    const fillCurrenciesRates = () => {
         document.querySelector(".js-USD").innerText = USDrate.toFixed(2) + ` zł`;
         document.querySelector(".js-EUR").innerText = EURrate.toFixed(2) + ` zł`;
         document.querySelector(".js-GBP").innerText = GBPrate.toFixed(2) + ` zł`;
+    };
+
+
+    const getRate = (targetCurrency) => {
+        switch (targetCurrency) {
+            case "USD":
+                return USDrate;
+
+            case "EUR":
+                return EURrate;
+
+            case "GBP":
+                return GBPrate;
+        }
+    };
+
+
+    const countOutput = (amountPLN, targetCurrency) => {
+        const rate = getRate(targetCurrency)
+        return amountPLN / rate;
+    };
+
+
+    const displayResult = (output, targetCurrency) => {
+        calculatedOutputElement.innerText = output.toFixed(2) + " " + targetCurrency;
     }
-    currencyValue();
-
-
-    const countOutput = () => {
-        formElement.addEventListener("submit", (event) => {
-            event.preventDefault();
-
-            const currency = document.querySelector(".js-currency").value;
-            const PLN = document.querySelector(".js-exchangedPLN").value;
-
-            let rate;
-            switch (currency) {
-                case "USD":
-                    rate = USDrate;
-                    break;
-
-                case "EUR":
-                    rate = EURrate;
-                    break;
-
-                case "GBP":
-                    rate = GBPrate;
-            }
-
-            const output = PLN / rate;
-
-            displayResult(output, currency);
-        });
-    }
-
-    const displayResult = (output, currency) => {
-        calculatedOutput.innerText = output.toFixed(2) + " " + currency;
-    }
-    countOutput();
 
 
     const resetForm = () => {
         formElement.addEventListener("reset", () => {
-            calculatedOutput.innerText = "Wybierz walutę i wpisz kwotę do wymiany.";
+            calculatedOutputElement.innerText = "Wybierz walutę i wpisz kwotę do wymiany.";
         });
     }
     resetForm();
-}
+
+
+    const init = () => {
+        welcome();
+        fillCurrenciesRates();
+        getRate();
+
+        formElement.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const targetCurrency = document.querySelector(".js-currency").value;
+            const amountPLN = document.querySelector(".js-exchangedPLN").value;
+
+            const output = countOutput(amountPLN, targetCurrency)
+
+            displayResult(output, targetCurrency);
+
+        });
+
+        countOutput();
+    }
+
+    init();
+};
+
+
