@@ -40,13 +40,13 @@
 
 
     const displayResult = (output, targetCurrency) => {
-        calculatedOutputElement.innerText = output.toFixed(2) + " " + targetCurrency;
+        calculatedOutputElement.innerText = `${output.toFixed(2)} ${targetCurrency}`;
     }
 
 
     const resetForm = () => {
         formElement.addEventListener("reset", () => {
-            calculatedOutputElement.innerText = "Wybierz walutę i wpisz kwotę do wymiany.";
+            calculatedOutputElement.innerText = `Wybierz walutę i wpisz kwotę do wymiany.`;
         });
     }
     resetForm();
