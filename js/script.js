@@ -7,9 +7,9 @@
     const formElement = document.querySelector(".js-form");
     const calculatedOutputElement = document.querySelector(".js-output");
 
-    const USDrate = 4.4126;
-    const EURrate = 4.6836;
-    const GBPrate = 5.3239;
+    const USDrate = 4.2934;
+    const EURrate = 4.6755;
+    const GBPrate = 5.3107;
 
 
     const fillCurrenciesRates = () => {
